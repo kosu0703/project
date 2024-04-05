@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<!-- MyBatis 에서 쿼리에 매핑되는 파라미터에 null 값이 있으면 에러발생 방지 -->
+		<setting name="jdbcTypeForNull" value="NULL" />
+		<!-- MyBatis 에서 캐싱기능 종료 -->
+		<setting name="cacheEnabled" value="false" />
+	</settings>
+	<typeAliases>
+		<!-- 별칭설정 -->
+		<typeAlias type="com.ict.common.dao.OrderVO" alias="orderVO" />
+		<typeAlias type="com.ict.common.dao.AddressVO" alias="addrVO" />
+		<typeAlias type="com.ict.common.dao.OptionVO" alias="optionVO" />
+		<typeAlias type="com.ict.common.dao.FaqVO" alias="faqVO" />
+		<typeAlias type="com.ict.common.dao.ProductVO" alias="proVO" />
+		<typeAlias type="com.ict.common.dao.PostVO" alias="postVO" />
+		<typeAlias type="com.ict.common.dao.Pro_ImgVO" alias="imgVO" />
+		<typeAlias type="com.ict.common.dao.UserVO" alias="userVO" />
+		<typeAlias type="com.ict.common.dao.WishVO" alias="wishVO" />
+		
+		<!-- 예찬별칭 -->
+		<typeAlias type="com.ict.common.dao.WishVO" alias="wishVO" />
+	</typeAliases>
+	<mappers>
+		<!-- 매퍼 -->
+		<mapper resource="mappers/mypage-mapper.xml" />
+		<mapper resource="mappers/order-mapper.xml" />
+		<!-- 자기꺼 알아서 연결 -->
+	</mappers>
+</configuration>

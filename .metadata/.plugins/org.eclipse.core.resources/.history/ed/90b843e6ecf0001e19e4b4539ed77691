@@ -1,0 +1,34 @@
+package com.ict.mypage.dao;
+
+import java.util.List;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+
+@Repository
+public class MypageDAO {
+	
+	@Autowired 
+	private SqlSessionTemplate sqlSessionTemplate;
+	
+	public List<OrderListVO> getOrderList(String u_idx) {
+		try {
+			return sqlSessionTemplate.selectList("mypage.orderlist", u_idx);
+		} catch (Exception e) {
+			System.out.println("getOrderList : " + e);
+		}
+		return null;
+	}
+	
+	public List<PurchaseVO> getPurchaseList(String order_idx) {
+		try {
+			return sqlSessionTemplate.selecton
+		} catch (Exception e) {
+			System.out.println("getPurchaseList : " + e);
+		}
+		return null;
+	}
+	
+}

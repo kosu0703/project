@@ -1,0 +1,7 @@
+package com.ict.mypage.dao;
+
+public class OrderListVO {
+	private String f_name, p_name, p_size, order_date, order_price, order_p_quant;
+
+	
+}

@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+.div {
+	min-height: 600px;
+}
+
+.div>ul {
+	list-style-type: none; /* disc 지우기 */
+	background-color: green;
+	overflow: hidden;
+	margin: 20px auto 0px;
+	width: 55%;
+}
+
+.div>ul>li {
+	float: left; /* 한줄로 만들기(옆으로 퍼지기) */
+	width: 20%;
+	text-align: center;
+	border-left: 1px solid white;
+}
+
+.div>ul>li>a {
+	text-decoration: none; /* 밑줄 지우기 */
+	display: block; /* 블록 레벨로 만들기 */
+	padding: 16px 50px; /* 상하 , 좌우 너비 지정 */
+	color: white; /* 글자색 */
+}
+
+/* 마우스를 올렸을때 변화 */
+.div>ul>li>a:hover {
+	background-color: #333333;
+}
+
+.div>h2 {
+	margin: 30px auto;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+/* ================================= */
+
+.resign {
+	width: 600px;
+	margin: 0 auto;
+}
+
+.resign fieldset {
+	padding: 15px;
+	border: 1px solid black;
+}
+
+.resign ul {
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+.resign li {
+	margin: 10px;
+}
+
+.resign li label {
+	width: 120px;
+	float: left;
+	text-align: left;
+}

@@ -1,0 +1,26 @@
+package com.ict.mypage.dao;
+
+import java.util.List;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.ict.common.dao.OrderVO;
+
+@Repository
+public class MypageDAO {
+	
+	@Autowired 
+	private SqlSessionTemplate sqlSessionTemplate;
+	
+	public List<OrderVO> getOrderList(String u_idx) {
+		try {
+			return sqlSessionTemplate.selectList("mypage.orderlist", u_idx);
+		} catch (Exception e) {
+			System.out.println("getOrderList : " + e);
+		}
+		return null;
+	}
+	
+}

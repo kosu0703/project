@@ -1,0 +1,5 @@
+package com.ict.common.dao;
+
+public class BasketVO {
+	private String b_idx, u_idx, p_idx, o_idx;
+}

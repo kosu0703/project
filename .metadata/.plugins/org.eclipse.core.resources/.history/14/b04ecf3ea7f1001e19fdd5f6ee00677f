@@ -1,0 +1,86 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link href="<c:url value="/resources/css/common.css"/>" rel='stylesheet' />
+<link href="<c:url value="/resources/css/orderlist_page.css"/>" rel='stylesheet' />
+
+<title>주문목록 페이지</title>
+</head>
+<body>
+	   <%@ include file="../common/header.jsp" %>
+  
+
+
+	<section>
+	
+<!--===============================================================================  -->
+
+		<div class="div">
+			<br>
+			<ul>
+				<li><a href="orderlist_page.do">주문목록</a></li>
+				<li><a href="purchaselist_page.do">구매목록</a></li>
+				<li><a href="#">찜목록</a></li>
+				<li><a href="#">회원정보수정</a></li>
+				<li><a href="#">회원탈퇴</a></li>
+			</ul>
+	
+			<h2>주문목록</h2>	
+			
+			<table class="table">
+				<thead>
+	 				<tr>
+		 				<th>주문 상품 정보</th>
+		 				<th>주문 금액 및 수량</th>
+		 				<th>주문 일자</th>
+		 				<th>주문 상태</th>
+	 				</tr>
+	 			</thead>
+	 			<tbody>
+	 				<c:choose>
+	 					<c:when test="${empty order_list}">
+	 						<tr><td colspan="4"><h3>주문한 상품이 없습니다.</h3></td></tr>
+	 					</c:when>
+	 					<c:otherwise>
+	 						<c:forEach var="k" items="${order_list}">
+	 							<tr>f_name, p_name, p_size, order_date, order_price, order_p_quant;
+	 								<td>
+	 									<img src="resources/images/${k.f_name}">
+	 									${k.p_name} : ${k.p_size}
+	 								</td>
+	 								<td>${k.order_price}<br>${k.order_p_quant}</td>
+	 								<td>${k.order_date}</td>
+	 								<td>
+	 									아직안함
+	 									<%-- 
+										<c:if test="${k.del_active == 0}">운송장출력</c:if>
+										<c:if test="${k.del_active == 1}">배송중</c:if>
+										<c:if test="${k.del_active == 2}">배송완료
+											<a href="purchase_go.do?order_idx=${k.order_idx}">
+												구매확정
+											</a>
+										</c:if>
+										 --%>	 								
+	 								</td>
+	 							</tr>
+	 						</c:forEach>
+	 					</c:otherwise>
+	 				</c:choose>
+	 			</tbody>
+			</table>
+						
+		</div>
+
+<!--===============================================================================  -->
+
+  
+      <%@ include file="../common/footer.jsp" %>
+	</section>
+</body>
+</html>

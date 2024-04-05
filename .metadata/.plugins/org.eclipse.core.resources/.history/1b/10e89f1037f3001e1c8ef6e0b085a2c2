@@ -1,0 +1,6 @@
+package com.ict.mypage.dao;
+
+public class WishListVO {
+	private String f_name, p_name, p_price;
+	
+}

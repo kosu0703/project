@@ -1,0 +1,16 @@
+package com.ict.mypage.service;
+
+import java.util.List;
+
+import com.ict.mypage.dao.OrderListVO;
+import com.ict.mypage.dao.PurchaseVO;
+
+public interface MypageService {
+	
+	//	주문목록
+	public List<OrderListVO> getOrderList(String u_idx);
+	
+	//	구매목록
+	public List<PurchaseVO> getPurchaseList(String order_idx);
+	
+}

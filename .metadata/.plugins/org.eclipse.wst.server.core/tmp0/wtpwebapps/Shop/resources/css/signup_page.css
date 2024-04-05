@@ -1,0 +1,47 @@
+#sign_wrap>h1 {
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+#sign_wrap>p {
+	text-align: center;
+	margin-left: 670px;
+	margin-bottom: 10px;
+}
+
+table {
+	width: 800px;
+	/* position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%); */
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 10px;
+	text-align: left;
+}
+
+input[type="number"] {
+	width: 50px;
+}
+
+#zip-code, #address-1, #address-1-1, #address-2 {
+	margin-bottom: 3px;
+}
+
+#box_3 {
+	width: 800px;
+	margin: 0 auto;
+}
+
+#but_sign {
+	width: 800px;
+	height: 70px;
+	margin-bottom: 150px;
+	font-size: 20px;
+}

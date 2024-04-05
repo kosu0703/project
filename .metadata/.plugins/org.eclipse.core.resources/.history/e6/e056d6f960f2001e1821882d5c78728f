@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="mypage">
+	
+	<select id="orderlist" parameterType="String" resultType="olvo">
+		select i.f_name, p.p_name, op.p_size, o.order_price, opd.order_p_quant, 
+				o.order_date, o.order_idx
+		from users u 
+		join orders o on u.u_idx = o.u_idx 
+		join orders_pd opd on opd.order_idx = o.order_idx
+		join products p on p.p_idx = opd.p_idx 
+		join images i on p.p_idx = i.p_idx 
+		join option op on op.option_idx = o.option_idx 
+		where o.u_idx = #{u_idx} and i.main = 1 and o.delivery_active = 0 
+	</select>
+	
+	<update id="delivery_active" parameterType="String">
+		update orders 
+		set delivery_active = 1, purchase_date = sysdate() 
+		where order_idx = #{order_idx}
+	</update>
+	
+	<select id="purchaselist" parameterType="String" resultType="plvo">
+		select i.f_name, p.p_name, op.p_size, o.order_price, opd.order_p_quant, 
+				o.order_date, o.order_idx
+		from users u 
+		join orders o on u.u_idx = o.u_idx 
+		join orders_pd opd on opd.order_idx = o.order_idx
+		join products p on p.p_idx = opd.p_idx 
+		join images i on p.p_idx = i.p_idx 
+		join option op on op.option_idx = o.option_idx 
+		where o.u_idx = #{u_idx} and i.main = 1 and o.delivery_active = 1
+	</select>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</mapper>

@@ -1,0 +1,16 @@
+package com.ict.mypage.service;
+
+import java.util.List;
+
+import com.ict.common.dao.OrderVO;
+import com.ict.mypage.dao.OrderListVO;
+
+public interface MypageService {
+	
+	//	회원idx 로 주문테이블 리스트
+	public List<OrderVO> getOrder(String u_idx);
+	
+	//	주문테이블 VO 로 원하는 정보 뽑아오기
+	public OrderListVO getOrderList(OrderVO orderVO);
+	
+}

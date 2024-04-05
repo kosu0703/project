@@ -1,0 +1,22 @@
+package com.ict.mypage.service;
+
+import java.util.List;
+
+import com.ict.mypage.dao.OrderListVO;
+
+public interface MypageService {
+	
+	//	주문목록
+	public List<OrderListVO> getOrderList(String u_idx);
+	
+	//	3일동안 구매확정 안누르면 구매목록으로 넘어가게
+	public int getDeliveryActive(String order_idx);
+	
+	
+	
+	
+	
+	
+	
+	
+}

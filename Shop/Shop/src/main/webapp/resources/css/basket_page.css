@@ -1,0 +1,41 @@
+.basket {
+  width: 100%;
+  min-height: calc(100vh - 120px);
+  position: relative;
+}
+
+.basket > h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.basket > table,
+.basket_table_head > th,
+.basket_table_body > td {
+  border: 1px solid black;
+  padding: 3px;
+}
+.basket > table {
+  width: 600px;
+  border-collapse: collapse;
+  text-align: center;
+}
+.basket_table_head > th {
+  font-weight: bold;
+  font-size: 20px;
+}
+.basket > table {
+  margin: auto;
+  text-align: center;
+}
+/* 옵션 변경 선택 시 옵션 변경요 */
+.optchg {
+  width: 300px;
+  height: 500px;
+  background-color: aqua;
+  position: fixed;
+  top: 300px;
+  right: 100px;
+  display: none;
+}

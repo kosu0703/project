@@ -1,0 +1,83 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link href="<c:url value="/resources/css/common.css"/>" rel='stylesheet' />
+<link href="<c:url value="/resources/css/orderlist_page.css"/>" rel='stylesheet' />
+
+<script type="text/javascript">
+	function purchase_go() {
+		//	구매확정 누르면 해당 주문 상품이 구매리스트 테이블로 이동
+		//	3일동안 안누르면 자동으로 이동
+		// 테스트할거임~
+	}
+</script>
+
+<title>주문목록 페이지 (마이페이지 초기화면)</title>
+</head>
+<body>
+	   <%@ include file="../common/header.jsp" %>
+  
+
+
+	<section>
+	
+<!--===============================================================================  -->
+
+		<div class="div">
+			<br>
+			<ul>
+				<li><a href="#">주문목록</a></li>
+				<li><a href="#">구매목록</a></li>
+				<li><a href="#">찜목록</a></li>
+				<li><a href="#">회원정보수정</a></li>
+				<li><a href="#">회원탈퇴</a></li>
+			</ul>
+	
+			<h2>주문목록</h2>	
+			
+			<table class="table">
+				<thead>
+	 				<tr>
+		 				<th>주문 상품 정보</th>
+		 				<th>주문 금액 및 수량</th>
+		 				<th>주문 일자</th>
+		 				<th>주문 상태</th>
+	 				</tr>
+	 			</thead>
+	 			<tbody>
+	 				<tr>
+		 				<td><img src="resources/images/img01.jpg" width="70px"> 상품명 : 사이즈</td>
+		 				<td>11,000원<br>1개</td>
+		 				<td>2024-04-05</td>
+		 				<td>운송장출력</td>
+	 				</tr>
+	 				<tr>
+		 				<td><img src="resources/images/img02.jpg" width="70px"> 상품명 : 사이즈</td>
+		 				<td>22,000원<br>2개</td>
+		 				<td>2024-07-03</td>
+		 				<td>배송중</td>
+	 				</tr>
+	 				<tr>
+		 				<td><img src="resources/images/img03.jpg" width="70px"> 상품명 : 사이즈</td>
+		 				<td>33,000원<br>3개</td>
+		 				<td>2024-08-06</td>
+		 				<td>배송완료 <button onclick="purchase_go()">구매확정</button></td>
+	 				</tr>
+	 			</tbody>
+			</table>
+						
+		</div>
+
+<!--===============================================================================  -->
+
+  
+      <%@ include file="../common/footer.jsp" %>
+	</section>
+</body>
+</html>
